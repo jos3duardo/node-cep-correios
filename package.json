@@ -12,8 +12,7 @@
     "name": "node-cep-correios",
     "escapedName": "node-cep-correios",
     "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "saveSpec": null
   },
   "_requiredBy": [
     "#USER",
@@ -51,9 +50,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vitorleal/node-correios.git"
-  },
-  "scripts": {
-    "test": "mocha --reporter spec"
   },
   "version": "1.0.0"
 }
