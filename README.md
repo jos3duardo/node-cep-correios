@@ -1,10 +1,10 @@
 # Consulta de CEP
-[![Build Status](https://travis-ci.org/vitorleal/node-correios.svg?branch=master)](https://travis-ci.org/vitorleal/node-correios)
-[![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/vitorleal/node-correios)
+[![Build Status](https://travis-ci.com/jos3duardo/node-cep-correios.svg?branch=master)](https://travis-ci.com/jos3duardo/node-cep-correios)
+[![npm](https://img.shields.io/npm/l/express.svg)](https://travis-ci.com/jos3duardo/node-cep-correios)
 
 [![NPM](https://nodei.co/npm/node-correios.png?mini=true)](https://nodei.co/npm/node-correios/)
 
-Módulo de [Node.js](http://nodejs.org) que utilizar a API https://cep.awesomeapi.com.br/json/{CEP}  **para a buscar endereço pelo CEP**.
+Módulo de [Node.js](http://nodejs.org) que utiliza a API https://cep.awesomeapi.com.br/json/{CEP}  **para a buscar endereço pelo CEP**.
 [API consulta CEP Correios](https://cep.awesomeapi.com.br/json/{CEP})
 
 
