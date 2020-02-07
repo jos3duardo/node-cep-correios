@@ -29,7 +29,7 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "homepage": "https://github.com/vitorleal/node-correios#readme",
+  "homepage": "https://github.com/jos3duardo/node-cep-correios#readme",
   "keywords": [
     "correios",
     "correio",
@@ -42,5 +42,5 @@
     "type": "git",
     "url": "git+https://github.com/jos3duardo/node-cep-correios.git"
   },
-  "version": "1.0.0"
+  "version": "1.0.2"
 }
