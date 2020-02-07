@@ -1,0 +1,59 @@
+{
+  "_from": "node-cep-correios",
+  "_id": "node-cep-correios@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-wlmd+5+UU8malGRXUuuU6jZRfkkrReMIvMmz8fzi0vkc+Jbv21n7T3eOE1NksSMVHZBsbXLNw3dovidU1SgY0Q==",
+  "_location": "/node-cep-correios",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-cep-correios",
+    "name": "node-cep-correios",
+    "escapedName": "node-cep-correios",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-correios/-/node-correios-3.0.2.tgz",
+  "_shasum": "470e47ecb9104efd1057813aae79cf6ec140518e",
+  "_spec": "node-cep-correios",
+  "author": {
+    "name": "José Eduardo",
+    "email": "jos3duardolopes@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jos3duardo/node-cep-correios"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "request": "^2.67.0"
+  },
+  "deprecated": false,
+  "description": "Node.js module for the Brazilian mail service, Correios",
+
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "homepage": "https://github.com/vitorleal/node-correios#readme",
+  "keywords": [
+    "correios",
+    "correio",
+    "cep"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "node-cep-correios",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorleal/node-correios.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "version": "1.0.0"
+}
