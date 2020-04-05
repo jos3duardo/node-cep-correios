@@ -3,6 +3,9 @@
 [![npm](https://img.shields.io/npm/l/express.svg)](https://travis-ci.com/jos3duardo/node-cep-correios)
 [![npm downloads](https://img.shields.io/npm/dm/node-cep-correios.svg)](https://www.npmjs.com/package/node-cep-correios)<br />
 
+O desenvolvimento deste módulo foi devido a dificuldade de encontrar uma api que posibilitase fazer requisições em massa sem que 
+tivese alguma restrição no fornecimento do serviço. E isto é o que esta biblioteca realiza, uma forma simples e facil de fazer uma grande consulta 
+de ceps sem ter o serviço bloqueado. Use e abuse deste modulo, qualquer sugestão é bem vinda.
 
 Módulo de [Node.js](http://nodejs.org) que utiliza a API https://cep.awesomeapi.com.br/json/{CEP}  **para a buscar endereço pelo CEP**.
 [API consulta CEP Correios](https://cep.awesomeapi.com.br/json/{CEP})
