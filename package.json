@@ -1,6 +1,6 @@
 {
   "_from": "node-cep-correios",
-  "_id": "node-cep-correios@1.0.4",
+  "_id": "node-cep-correios@1.0.5",
   "_inBundle": false,
   "_location": "/node-cep-correios",
   "_phantomChildren": {},
@@ -33,14 +33,18 @@
   "keywords": [
     "correios",
     "correio",
-    "cep"
+    "cep",
+    "Brazil"
   ],
   "license": "MIT",
   "main": "index.js",
   "name": "node-cep-correios",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jos3duardo/node-cep-correios.git"
+    "url": "git://github.com/jos3duardo/node-cep-correios.git"
   },
-  "version": "1.0.4"
+  "version": "1.0.6",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  }
 }
