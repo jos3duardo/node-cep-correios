@@ -17,6 +17,13 @@ npm install node-cep-correios --save
 ```
 
 ## Como utilizar para fazer busca de um CEP
+Você pode informar um cep da seguinte maneura:
+
+- [x] 70.100-00  
+- [x] 70100000  
+- [x] 70.10000  
+
+O sistema remove os caracteres especiais
 
 ```javascript
 let Correios = require('node-cep-correios');
