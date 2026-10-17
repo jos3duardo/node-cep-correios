@@ -1,47 +1,38 @@
 {
-  "_from": "node-cep-correios",
-  "_id": "node-cep-correios@1.0.5",
-  "_inBundle": false,
-  "_location": "/node-cep-correios",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "node-cep-correios",
-    "name": "node-cep-correios",
-    "escapedName": "node-cep-correios",
-    "rawSpec": "",
-    "saveSpec": null
+  "name": "node-cep-correios",
+  "version": "2.0.0",
+  "description": "Node.js module for the Brazilian mail service, Correios",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.txt"
+  ],
+  "scripts": {
+    "test": "node --test test/correios.test.js",
+    "test:live": "node test/ao-vivo.js"
   },
-  "author": {
-    "name": "José Eduardo",
-    "email": "jos3duardolopes@gmail.com"
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "José Eduardo <jos3duardolopes@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jos3duardo/node-cep-correios#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jos3duardo/node-cep-correios.git"
   },
   "bugs": {
-    "url": "https://github.com/jos3duardo/node-cep-correios"
+    "url": "https://github.com/jos3duardo/node-cep-correios/issues"
   },
-  "bundleDependencies": false,
-  "dependencies": {
-    "request": "^2.67.0"
-  },
-  "deprecated": false,
-  "description": "Node.js module for the Brazilian mail service, Correios",
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "homepage": "https://github.com/jos3duardo/node-cep-correios#readme",
   "keywords": [
     "correios",
     "correio",
     "cep",
     "Brazil"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "name": "node-cep-correios",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jos3duardo/node-cep-correios.git"
-  },
-  "version": "1.0.6"
+  ]
 }
