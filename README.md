@@ -9,7 +9,7 @@ de ceps sem ter o serviço bloqueado. Use e abuse deste módulo, qualquer sugest
 
 Módulo de [Node.js](http://nodejs.org) que utiliza a API https://cep.awesomeapi.com.br/json/{CEP} **para buscar endereço pelo CEP**.
 
-Sem dependências: a partir da 2.0.0 usa o `fetch` nativo do Node. Requer **Node 18 ou superior**.
+Sem dependências: a partir da 2.0.0 usa o `fetch` nativo do Node. Requer **Node 20 ou superior**.
 
 ## Como instalar
 
@@ -66,11 +66,14 @@ correios.consultaCEP('79002-000');
 
 ```javascript
 const correios = new Correios({
-  timeout: 5000,          // ms; padrão 5000. 0 desliga
-  tamanhoMaximo: 65536,   // bytes aceitos no corpo da resposta; padrão 64 KiB
+  timeout: 5000,          // ms, número finito >= 0; padrão 5000. 0 desliga
+  tamanhoMaximo: 65536,   // bytes aceitos no corpo, número finito > 0; padrão 64 KiB
   url: 'https://cep.awesomeapi.com.br/json/{CEP}', // precisa do marcador {CEP}
 });
 ```
+
+Opção inválida (`timeout` negativo ou `NaN`, `tamanhoMaximo` zero, `url` que não
+é string ou sem `{CEP}`) lança `ErroValidacao` no construtor.
 
 Redirecionamentos da API não são seguidos: uma resposta 3xx vira `ErroConsulta`.
 
@@ -117,6 +120,18 @@ validarCep('79002-000');     // true
 npm test                      # unitários, com servidor HTTP local, sem internet
 npm run test:live             # consulta real do CEP 79002-000
 npm run test:live -- 01001000 # outro CEP
+```
+
+## Publicação
+
+A publicação no npm sai pelo GitHub Actions (`.github/workflows/release.yml`), por
+trusted publishing com provenance — sem token do npm no repositório. Empurrar uma
+tag `v<versão>` igual à do `package.json` roda a suíte do CI e, se passar,
+publica. A tag é o gatilho: criar a tag equivale a publicar. Versão com hífen
+(`v2.1.0-beta.1`) vai para o dist-tag `next`.
+
+```
+git tag v2.0.0 && git push origin v2.0.0
 ```
 
 ## Mudanças

@@ -13,8 +13,9 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ### Mudanças incompatíveis
 
-- **Node 18 ou superior** (`engines.node: >=18.0.0`). O `fetch` e o
-  `AbortSignal.timeout` nativos não existem antes disso.
+- **Node 20 ou superior** (`engines.node: >=20.0.0`). O `fetch` e o
+  `AbortSignal.timeout` nativos exigem pelo menos o 18, mas o Node 18 está fora
+  de suporte desde abr/2025; o piso declarado é o que o CI testa (20, 22 e 24).
 - **CEP não encontrado rejeita a Promise.** Na 1.x a resposta 404 da API era
   entregue no `.then()` como `{ code: 'not_found', message: ... }`. Agora rejeita
   com `ErroNaoEncontrado` (`.Erro === 404`, `.MsgErro === 'Cep não encontrado.'`).
@@ -41,7 +42,9 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 - `consultaCEP()` aceita o CEP direto (`consultaCEP('79002-000')`), além de
   `{ cep }`, e aceita número.
 - `normalizarCep()` e `validarCep()` exportados.
-- Opção `url` no construtor, validada quanto ao marcador `{CEP}`.
+- Opções do construtor validadas: `url` string com o marcador `{CEP}`,
+  `timeout` número finito >= 0, `tamanhoMaximo` número finito > 0. Valor
+  inválido lança `ErroValidacao` na construção, em vez de falhar na consulta.
 - Tipos TypeScript (`index.d.ts`).
 - Testes com `node:test` e servidor HTTP local (`npm test`), mais
   `npm run test:live` para consultar a API real.
@@ -57,8 +60,10 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ### Alterado
 
-- `node_modules/` e `.npmrc` deixaram de ser versionados.
-- Travis CI (Node 8–11) substituído por GitHub Actions (Node 18, 20 e 22).
+- `node_modules/`, `.npmrc` e `.idea/` deixaram de ser versionados.
+- Travis CI (Node 8–11) substituído por GitHub Actions (Node 20, 22 e 24).
+- Publicação por tag `v<versão>` no GitHub Actions, com trusted publishing e
+  provenance (`release.yml`), em vez de `npm publish` local.
 - `package.json` limpo dos campos `_from`, `_id` etc., copiados de uma instalação.
 
 ## [1.0.6]
