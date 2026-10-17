@@ -71,6 +71,22 @@ describe('Construtor', () => {
     assert.equal(new Correios({ timeout: 0 }).timeout, 0);
   });
 
+  for (const [rotulo, opcoes] of [
+    ['url que não é string', { url: 42 }],
+    ['timeout negativo', { timeout: -1 }],
+    ['timeout NaN', { timeout: NaN }],
+    ['timeout Infinity', { timeout: Infinity }],
+    ['timeout string', { timeout: '5000' }],
+    ['tamanhoMaximo zero', { tamanhoMaximo: 0 }],
+    ['tamanhoMaximo negativo', { tamanhoMaximo: -10 }],
+    ['tamanhoMaximo Infinity', { tamanhoMaximo: Infinity }],
+    ['tamanhoMaximo string', { tamanhoMaximo: '1000' }],
+  ]) {
+    test(`recusa ${rotulo} com ErroValidacao`, () => {
+      assert.throws(() => new Correios(opcoes), ErroValidacao);
+    });
+  }
+
   test('url sem o marcador {CEP} falha na construção', () => {
     assert.throws(() => new Correios({ url: 'https://exemplo.test/cep' }), ErroValidacao);
   });

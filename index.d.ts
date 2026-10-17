@@ -23,7 +23,7 @@ declare namespace Correios {
     url?: string;
     /** Timeout em milissegundos. Padrão: 5000. `0` desliga. */
     timeout?: number;
-    /** Limite do corpo da resposta em bytes. Padrão: 65536. */
+    /** Limite do corpo da resposta em bytes, > 0. Padrão: 65536. */
     tamanhoMaximo?: number;
   }
 
